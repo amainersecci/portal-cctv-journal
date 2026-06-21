@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛事信息参考页 · 世界杯</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f4f6;
+            line-height: 1.7;
+            color: #1e1e2f;
+        }
+        .hero {
+            background: linear-gradient(145deg, #0d1b2a 0%, #1b3a4b 100%);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            color: #e7edf5;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(to bottom, transparent, #f3f4f6);
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin-bottom: 0.6rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #bfd7e8;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 2.8rem 1.8rem 3.5rem;
+        }
+        .lead {
+            font-size: 1.2rem;
+            background: #ffffffdd;
+            backdrop-filter: blur(3px);
+            padding: 1.6rem 2rem;
+            border-radius: 32px 12px 32px 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            margin-bottom: 2.4rem;
+            border-left: 4px solid #2e7d7b;
+        }
+        .lead a {
+            color: #1a5f5d;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 500;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 2.8rem 0 2.2rem;
+        }
+        .card-item {
+            flex: 1 1 220px;
+            background: white;
+            border-radius: 28px 8px 28px 8px;
+            padding: 1.6rem 1.5rem 1.8rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #eef2f6;
+        }
+        .card-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,30,30,0.08);
+        }
+        .card-item h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #1e3e4a;
+            letter-spacing: 0.3px;
+        }
+        .card-item p {
+            font-size: 0.95rem;
+            color: #34495e;
+        }
+        .story-block {
+            background: #ffffff;
+            padding: 2rem 2.2rem;
+            border-radius: 48px 10px 48px 10px;
+            margin: 2rem 0 2.6rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+        }
+        .story-block p {
+            margin-bottom: 1.2rem;
+        }
+        .story-block p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-link {
+            background: #eef6f5;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            display: inline-block;
+            margin: 0.5rem 0 0.2rem;
+        }
+        .highlight-link a {
+            color: #0c4a6e;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #5e9b9a;
+            padding-bottom: 2px;
+        }
+        .faq-note {
+            background: #fafbfc;
+            padding: 1.4rem 2rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            margin-top: 2rem;
+            border: 1px solid #e2eaf0;
+        }
+        .faq-note strong {
+            color: #1b4e5c;
+        }
+        .footer-note {
+            margin-top: 3.2rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #dce3ea;
+            font-size: 0.85rem;
+            color: #5a6f7c;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+        a {
+            color: #1a6b6b;
+        }
+        a:hover {
+            color: #0d4444;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.4rem;
+                letter-spacing: 2px;
+            }
+            .container {
+                padding: 1.8rem 1rem 2.5rem;
+            }
+            .lead {
+                padding: 1.2rem 1.4rem;
+                font-size: 1.05rem;
+            }
+            .card-item {
+                flex: 1 1 100%;
+            }
+            .story-block {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>⚽ 赛事信息 · 对照</h1>
+        <p>从日常查询、横向对比到延伸阅读，一个安静的起点</p>
+    </header>
+
+    <main class="container">
+        <div class="lead">
+            <p>📋 无论你是在整理观赛笔记、回顾历史对阵，还是想了解球队数据，<a href="https://portal-cctv-worldcup.com">世界杯</a> 信息门户都提供了结构化的赛事资料。这里不制造情绪，只做如实整理。</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card-item">
+                <h3>📆 赛程与对照</h3>
+                <p>小组赛、淘汰赛时间表，同时标注当地时间与北京时间，方便跨时区对照。</p>
+            </div>
+            <div class="card-item">
+                <h3>📊 历史数据延伸</h3>
+                <p>历届冠军、最佳射手、决赛比分，支持按年份或球队横向比较。</p>
+            </div>
+            <div class="card-item">
+                <h3>🧾 球队与阵容</h3>
+                <p>参赛队伍名单、常用阵型、关键球员信息，适合赛前快速查阅。</p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <p><strong>一个日常用法：</strong> 打开 <a href="https://portal-cctv-worldcup.com">世界杯</a> 页面，先看当天赛程，然后对照小组积分——如果你同时看两场比赛，积分榜能帮你快速计算晋级形势。</p>
+            <p>另一个常见场景是赛后延伸：查进球集锦对应的比赛时间，或者翻出几年前的决赛阵容，做球员流动的对比。这类查询不需要推送，只需要一个稳定的数据入口。</p>
+            <p>页面本身没有广告干扰，排版以文字和表格为主，加载快，适合在手机或电脑上随手打开。</p>
+        </div>
+
+        <div class="highlight-link">
+            <p>🔗 常用入口：<a href="https://portal-cctv-worldcup.com">世界杯</a> · 赛程 · 积分 · 历史数据</p>
+        </div>
+
+        <div class="faq-note">
+            <p><strong>📌 FAQ 摘要</strong><br>
+            Q：是否需要注册或登录？<br>
+            A：所有公开赛程与数据均可直接查看，无需账户。<br>
+            Q：数据更新频率？<br>
+            A：小组赛阶段实时更新比分和出线形势，历史数据为静态存档。<br>
+            Q：移动端适配如何？<br>
+            A：页面采用响应式布局，手机浏览器缩放阅读均正常。</p>
+            <p style="margin-top: 1rem;">—— 页面本身不收集个人信息，也不包含动态推送。</p>
+        </div>
+
+        <div class="footer-note">
+            <p>内容基于公开赛事资料整理 · 信息仅供参考，以官方发布为准</p>
+        </div>
+    </main>
+</body>
+</html>
